@@ -1,2 +1,2 @@
 # Google Homepage Clone
-Project i had to do as a project at my uni
+Project i had to do for my uni
