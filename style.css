@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: hsl(0, 0%, 100%);
+    --text-color: hsl(0, 0%, 12%);
+    --element-hover-color: hsl(220, 9%, 87%);
+
+    --google-apps-menu-fill-color: hsl(213, 5%, 39%);
+
+    --shadow-color: hsla(0, 0%, 12%, 0.08);
+    --darker-shadow-color: hsla(275, 4%, 25%, 0.24);
+
+    --textarea-text-color: hsla(0, 0%, 0%, 0.87);
+
+    --search-border-color: hsl(220, 9%, 87%);
+    --search-bar-magnifier-fill-color: hsl(210, 6%, 63%);
+    --search-bar-tools-fill-color: hsl(0, 0%, 28%);
+    --search-bar-tools-ai-mode-icon-fill-color: hsl(0, 0%, 12%);
+    --search-bar-button-bg-color: hsl(200, 14%, 96%);
+
+    --ai-mode-shadow-blue-strong: hsla(220, 89%, 61%, 0.80);
+    --ai-mode-shadow-red-strong: hsla(4, 83%, 56%, 0.80);
+    --ai-mode-shadow-green-strong: hsla(142, 81%, 34%, 0.80);
+    --ai-mode-shadow-yellow-strong: hsla(44, 89%, 48%, 0.80);
+
+    --ai-mode-shadow-yellow-soft: hsla(44, 89%, 48%, 0.60);
+    --ai-mode-shadow-red-soft: hsla(4, 83%, 56%, 0.60);
+    --ai-mode-shadow-green-soft: hsla(142, 81%, 34%, 0.60);
+    --ai-mode-shadow-blue-soft: hsla(220, 89%, 61%, 0.60);
+
+    --search-bottom-button-text-color: hsl(220, 6%, 13%);
+
+    --default-border-radius: 40px;
+    --search-bar-border-radius: 26px;
+
+    --footer-text-color: hsl(0, 0%, 12%);
+    --footer-bg-color: hsl(0, 0%, 95%);
+    --footer-border-color: hsl(210, 24%, 87%)
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#main-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#nav-container {
+    padding: 6px;
+}
+
+#main-nav > nav {
+    padding-top: 3px;
+    padding-right: 3px;
+}
+
+#main-nav > nav > ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#main-nav > nav > ul > li {
+    padding-left: 15px;
+    font-size: 0.85em;
+}
+
+#main-nav > nav > ul > li > a {
+    display: block;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+}
+
+#main-nav > nav > ul > li > a:hover {
+    text-decoration: underline;
+}
+
+.g-apps-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--default-border-radius);
+    transition: background-color 0.3s ease;
+}
+
+.g-apps-icon svg {
+    width: 34px;
+    height: auto;
+    padding: 4px;
+    display: block;
+    fill: var(--google-apps-menu-fill-color);
+}
+
+.g-apps-icon:hover {
+    background-color: var(--element-hover-color);
+}
+
+.main-nav-link-profile-picture {
+    border-radius: 50%;
+}
+
+.profile-picture {
+    padding: 4px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: background-color 0.3s ease;
+}
+
+.profile-picture:hover {
+    background-color: var(--element-hover-color);
+}
+
+main {
+    flex: 1;
+}
+
+#logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20vh;
+}
+
+#google-logo {
+    object-fit: contain;
+    object-position: center bottom;
+}
+
+#search-container {
+    padding: 20px;
+}
+
+#search-bar {
+    display: flex;
+    position: relative;
+    border: 1px solid var(--search-border-color);
+    border-radius: var(--search-bar-border-radius);
+    max-width: 688px;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0px 3px 10px 0px var(--shadow-color);
+}
+
+#search-bar:hover {
+    box-shadow: 0 2px 8px 1px var(--darker-shadow-color);
+}
+
+#search-bar-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 8px 14px;
+    gap: 10px;
+}
+
+#magnifier-search-bar-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#magnifier-search-bar-icon > svg {
+    fill: var(--search-bar-magnifier-fill-color);
+    width: 20px;
+    height: 20px;
+}
+
+#search-bar-content textarea {
+    font-family: 'Fira Sans', Arial, sans-serif;
+    color: var(--textarea-text-color);
+    min-width: 400px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 6px 0;
+    margin: 0;
+    background: transparent;
+    color: var(--text-color);
+    resize: none;
+    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: normal;
+    min-height: 22px;
+}
+
+.search-bar-separator {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: transparent;
+}
+
+.search-bar-tools {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+}
+
+.search-bar-tools > div[role="button"] {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    border-radius: 6px;
+    line-height: normal;
+}
+
+.search-bar-tools div[role="button"] svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+    fill: var(--search-bar-tools-fill-color);
+}
+
+#search-bar-ai-tool {
+    padding: 0;
+}
+
+#search-bar-ai-tool > button {
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+    font-size: 14px;
+    padding: 8px;
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
+    background-color: var(--search-bar-button-bg-color);
+    font-family: 'Fira Sans', Arial, sans-serif;
+    transition: background-color, box-shadow 0.3s ease;
+}
+
+#search-bar-ai-tool > button:hover {
+    background-color: transparent;
+    box-shadow:
+        inset -10px 0 10px -6px var(--ai-mode-shadow-blue-strong),
+        inset 10px 0 10px -6px var(--ai-mode-shadow-red-strong),
+        inset 0 -8px 10px -6px var(--ai-mode-shadow-green-strong),
+        inset 0 8px 10px -6px var(--ai-mode-shadow-yellow-strong),
+
+        -10px 0 18px -4px var(--ai-mode-shadow-yellow-soft),
+        10px 0 18px -4px var(--ai-mode-shadow-red-soft),
+        0 -12px 18px -4px var(--ai-mode-shadow-green-soft),
+        0 12px 18px -4px var(--ai-mode-shadow-blue-soft);
+}
+
+#search-bar-ai-tool > button svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--search-bar-tools-ai-mode-icon-fill-color);
+}
+
+.search-bar-ai-tool-text {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+#search-bottom-buttons-container {
+    padding-top: 18px;
+}
+
+#search-bottom-buttons-container button {
+    margin: 11px 11px 4px 4px;
+}
+
+.search-bottom-button {
+    background-color: var(--search-bar-button-bg-color);
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 11px 4px;
+    padding: 0 16px;
+    font-optical-sizing: none;
+    user-select: none;
+    text-align: center;
+    height: 36px;
+    min-width: 54px;
+    line-height: 27px;
+    border: 1px solid transparent;
+    color: var(--search-bottom-button-text-color);
+}
+
+.search-bottom-button:hover {
+    border: 1px solid var(--search-border-color);
+    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+}
+
+#page-footer {
+    font-size: 15px;
+    color: var(--footer-text-color);
+    background-color: var(--footer-bg-color);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-top {
+    flex-basis: 100%;
+    padding: 15px 30px;
+    border-bottom: 1px solid var(--footer-border-color)
+}
+
+.footer-left {
+    padding: 15px 0 15px 35px;
+}
+
+.footer-right {
+    padding: 15px 30px 15px 0;
+}
+
+#page-footer a {
+    color: inherit;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+#page-footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-right a:last-child {
+    margin-right: 0;
+}
